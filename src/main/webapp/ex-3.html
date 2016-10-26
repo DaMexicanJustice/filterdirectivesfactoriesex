@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myController as ctrl">
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <!--<script src="script/script.js" type="text/javascript"></script>-->
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        Do we have access to angular: {{2 + 2}} if 4:yes <br>
+        Do we have access to my controller in script: {{ctrl.test}} <br> <br>
+        
+        Random number: {{ctrl.randomNumber}} <br>
+        Random String: {{ctrl.randomString}}
+
+        <script src="script/ex-3.js" type="text/javascript"></script>
+        <script>
+//                    var app = angular.module('myApp', []);
+//                    app.controller('myController', ['myFactory', function (myFactory) {
+//                            var self = this;
+//                            self.test = myFactory.test();
+//                            self.randomNumber = myFactory.getRandomNumber(100);
+//                            self.randomString = myFactory.getRandomString(self.randomNumber);
+//                        }]);
+//
+//                    app.factory('myFactory', function () {
+//                        var factory = {
+//                            test: function () {
+//                                return "I work";
+//                            },
+//                            getRandomNumber: function (N) {
+//                                return Math.floor((Math.random() * 100) + 1);
+//                            },
+//                            getRandomString: function (N) {
+//                                return new Array(N + 1).join((Math.random().toString(36) + '00000000000000000').slice(2, 18)).slice(0, N);
+//                            }
+//                        };
+//                        return factory;
+//                    });
+        </script>
+    </body>
+</html>

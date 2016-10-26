@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myApp" ng-controller="myController as ctrl">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    </head>
+    <body>
+        <h1>SOmething about restful countries</h1>
+        <h2>We can use angular: {{2+2}}</h2>
+        <h3>We can use controller: {{ctrl.test}}</h3>
+        <h4>We can use factory: {{ctrl.factoryTest}}</h4>
+        <h5>Console logging all countries {{ctrl.getAllCountries}}</h5>
+        <h5>Console logging all from region {{ctrl.getAllCountriesFromRegion}}</h5>
+        <h5>Console logging all by code {{ctrl.getAllCountriesByCode}}</h5>
+        
+        <p>All countries</p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Capital</th>
+                <th>Population</th>
+                <th>Region</th>
+            </tr>
+            <tr ng-repeat="c in ctrl.countries_all">
+                <td>{{c.name}}</td>
+                <td>{{c.capital}}</td>
+                <td>{{c.population}}</td>
+                <td>{{c.region}}</td>
+            </tr>
+        </table>
+        
+        <h5>All countries in Europe</h5>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Capital</th>
+                <th>Population</th>
+                <th>Region</th>
+            </tr>
+            <tr ng-repeat="co in ctrl.countries_all_from_region">
+                <td>{{co.name}}</td>
+                <td>{{co.capital}}</td>
+                <td>{{co.population}}</td>
+                <td>{{co.region}}</td>
+            </tr>
+        </table>
+        
+        <h5>All countries by code</h5>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Capital</th>
+                <th>Population</th>
+                <th>Region</th>
+            </tr>
+            <tr ng-repeat="cou in ctrl.countries_all_by_code">
+                <td>{{cou.name}}</td>
+                <td>{{cou.capital}}</td>
+                <td>{{cou.population}}</td>
+                <td>{{cou.region}}</td>
+            </tr>
+        </table>
+        
+        <script src="script/ex-4.js" type="text/javascript"></script>
+    </body>
+</html>
